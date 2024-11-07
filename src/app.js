@@ -26,5 +26,7 @@ await cartService.displayCart(myCart);
 //Calculo total dos preços dos itens do carrinho
 await cartService.calculateTotal(myCart);
 
+console.log("Olá");
+
 
 
