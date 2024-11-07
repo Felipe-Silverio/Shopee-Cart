@@ -1,14 +1,17 @@
 import createItem from "./item.js";
 
 //Quais ações o carrinho pode fazer
-//Casos de uso
 
-//Função de adicionar um item ao carrinho
+//Casos de uso
+//Adicionar um item
+//Deletar um item
+//Remover um item
+//Calcular total do carrinho
+
 async function addItem(userCart, item){
 userCart.push(item);
 };
 
-//Função de deletar um item
 async function deleteItem(userCart, name){
     const index = userCart.findIndex((item) => item.name === name)
 
@@ -17,9 +20,6 @@ async function deleteItem(userCart, name){
     }
 };
 
-//Função de remover itens do carrinho
-//Obs: a função deleteItem() remove o item do carrinho independente da quantidade.
-//A removeItem() tira apenas 1 unidade do item no carrinho
 async function removeItem(userCart, item){
     const indexFound = userCart.findIndex((p)=> p.name === item.name);
     
@@ -38,7 +38,7 @@ async function removeItem(userCart, item){
     }
 };
 
-//Calcular total do carrinho
+
 async function calculateTotal(userCart){
     console.log("\nShopee cart total is:")
     //reduce() percorre um item todo e permite fazer uma ação para cada atributo do item
@@ -46,7 +46,6 @@ async function calculateTotal(userCart){
     console.log(`\n 🛍️  Total:${result}`);
 };
 
-//Exibe o carrinho no terminal
 async function displayCart(userCart){
     console.log("\nShopee cart list: ");
     userCart.forEach((item, index)=> {
