@@ -1,5 +1,6 @@
 ## Objetivo
 Projeto NodeJs em aula na DIO (Digital Innovation One)
+
 Criar um carrinho de compras baseado no carrinho de compras da shopee, onde o carrinho de compras armazene itens e faça o calculo de sub-itens automaticamente.
 
 
